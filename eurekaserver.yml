@@ -5,8 +5,11 @@ eureka:
   instance:
     hostname: localhost
   client:
+    # Dont need to fetch the registry of microservice
     fetchRegistry: false
+    # No need to regist with eureka
     registerWithEureka: false
     serviceUrl:
+      #url where other service can use to fetch or expose service detail
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
     
